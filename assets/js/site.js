@@ -108,6 +108,7 @@
           "<div><h4>Contact us</h4>" +
             "IISER Tirupati<br>Srinivasapuram, Yerpedu Mandal<br>Tirupati District, Andhra Pradesh<br>India — 517619" +
             '<br><br><a href="mailto:' + esc(s.email) + '">' + esc(s.email) + "</a>" +
+            ' <button type="button" class="copybtn" data-copy="' + esc(s.email) + '" aria-label="Copy email address">Copy</button>' +
           "</div>" +
           "<div><h4>Important links</h4><ul>" +
             '<li><a href="index.html">Home</a></li>' +
@@ -134,6 +135,25 @@
           "<span>Faculty mentor: " + esc(TEAM.mentor.name) + "</span>" +
         "</div>" +
       "</div></footer>";
+
+    slot.querySelectorAll(".copybtn").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var text = b.getAttribute("data-copy");
+        var done = function () {
+          var old = b.textContent;
+          b.textContent = "Copied";
+          setTimeout(function () { b.textContent = old; }, 1600);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done, done);
+        } else {
+          var t = document.createElement("textarea");
+          t.value = text; document.body.appendChild(t); t.select();
+          try { document.execCommand("copy"); } catch (e) {}
+          document.body.removeChild(t); done();
+        }
+      });
+    });
   }
 
   /* ---------- search ---------- */
@@ -292,7 +312,11 @@
     if (el("learn-list")) {
       fill("learn-list", LEARN.map(function (l) {
         return '<article class="card"><div class="card__meta">' + esc(l.kind) + "</div>" +
-          "<h3>" + esc(l.title) + "</h3><p>" + esc(l.summary) + "</p></article>";
+          "<h3>" + esc(l.title) + "</h3>" +
+          (l.byline ? '<p class="muted" style="font-size:13px;margin-bottom:8px">' + esc(l.byline) + "</p>" : "") +
+          "<p>" + esc(l.summary) + "</p>" +
+          (l.link ? '<div class="card__foot"><a href="' + esc(l.link) + '" target="_blank" rel="noopener">Read the full article &rarr;</a></div>' : "") +
+          "</article>";
       }).join(""));
     }
     if (el("mentor")) {

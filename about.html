@@ -55,29 +55,93 @@
   </div></section>
 
   <section class="section" id="contact"><div class="wrap">
-    <div class="sectionhead"><h2>Contact</h2></div>
+    <div class="sectionhead"><h2>Contact</h2>
+      <p>Write to us with the form below, or email the club directly. General queries, researcher enquiries, school partnerships and suggestions all reach the same place.</p></div>
     <div class="grid grid--2">
-      <article class="card">
-        <h3>Write to us</h3>
-        <p>One address for everything &mdash; general queries, researcher enquiries, school partnerships and suggestions. Say which one it is in the subject line and it reaches the right person faster.</p>
-        <p style="margin-top:12px"><a class="btn btn--primary" id="mail-link" href="#">Email Prakriti</a></p>
-      </article>
-      <article class="card">
-        <h3>Find us</h3>
-        <p>Student Activity Centre, IISER Tirupati, Karakambadi Road, Rami Reddy Nagar, Tirupati 517507, Andhra Pradesh.</p>
-        <p>We are also on Instagram, LinkedIn and X &mdash; links are in the footer.</p>
-      </article>
+      <div>
+        <form id="contactForm" novalidate>
+          <div class="field">
+            <label for="c_name">Your name</label>
+            <input id="c_name" name="name" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="c_email">Your email</label>
+            <input id="c_email" name="email" type="email" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="c_topic">This is about</label>
+            <select id="c_topic" name="topic">
+              <option>General enquiry</option>
+              <option>I'm a researcher</option>
+              <option>School partnership</option>
+              <option>A suggestion</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="c_message">Message</label>
+            <textarea id="c_message" name="message" required></textarea>
+          </div>
+          <p><button type="submit" class="btn btn--primary btn--wide">Send message</button></p>
+          <p class="status" id="c_status" role="status" aria-live="polite"></p>
+          <p class="formnote">Goes straight to the club inbox. We usually reply within a few days.</p>
+        </form>
+      </div>
+      <div>
+        <article class="card">
+          <h3>Reach us directly</h3>
+          <p style="margin-bottom:10px"><a id="c_mail" href="#">prakriti@sac.iisertirupati.ac.in</a></p>
+          <p>IISER Tirupati<br>Srinivasapuram, Yerpedu Mandal<br>Tirupati District, Andhra Pradesh<br>India &mdash; 517619</p>
+          <p style="margin:0">We are also on Instagram, LinkedIn and X &mdash; links are in the footer.</p>
+        </article>
+      </div>
     </div>
   </div></section>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("c_mail").href = "mailto:" + SITE.email;
+
+    // Formspree endpoint. Replace FORM_ID after creating a free form at formspree.io.
+    var FORMSPREE = "";
+    var form = document.getElementById("contactForm");
+    var st = document.getElementById("c_status");
+    function say(m, tone){ st.textContent = m; st.dataset.tone = tone || ""; }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (!form.name.value.trim() || !form.email.value.trim() || !form.message.value.trim()) {
+        return say("Please fill in your name, email and message.", "err");
+      }
+      if (!FORMSPREE) {
+        // Fallback until Formspree is connected: open the user's mail app, pre-filled.
+        var body = "Name: " + form.name.value.trim() +
+                   "\nEmail: " + form.email.value.trim() +
+                   "\nTopic: " + form.topic.value +
+                   "\n\n" + form.message.value.trim();
+        window.location.href = "mailto:" + SITE.email +
+          "?subject=" + encodeURIComponent("Website enquiry — " + form.topic.value) +
+          "&body=" + encodeURIComponent(body);
+        return say("Opening your email app with the message ready to send.", "ok");
+      }
+      say("Sending…");
+      fetch(FORMSPREE, {
+        method: "POST",
+        headers: { "Accept": "application/json" },
+        body: new FormData(form)
+      }).then(function (r) {
+        if (r.ok) { form.reset(); say("Thanks — your message has been sent.", "ok"); }
+        else { say("Something went wrong. Please email us directly instead.", "err"); }
+      }).catch(function () {
+        say("Something went wrong. Please email us directly instead.", "err");
+      });
+    });
+  });
+  </script>
 </main>
 
 <div id="site-footer"></div>
 <script src="assets/js/content.js"></script>
 <script src="assets/js/site.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("mail-link").href = "mailto:" + SITE.email;
-  });
-</script>
 </body>
 </html>

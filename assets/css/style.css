@@ -216,6 +216,13 @@ p{margin:0 0 1rem;max-width:68ch}
 .person__role{font-size:13.5px;color:var(--muted);margin-bottom:8px}
 .person p{font-size:14.5px;color:var(--ink-soft);margin:0 0 8px}
 
+.copybtn{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;
+  background:none;border:1px solid #453D33;color:#D8CDB8;
+  padding:3px 9px;border-radius:3px;cursor:pointer;margin-left:4px;line-height:1.5;
+}
+.copybtn:hover{border-color:#7A7264;color:#fff}
+
 .teamlist{margin:0;padding-left:18px;font-size:14.5px;color:var(--ink-soft);line-height:1.9}
 .teamlist li{margin-bottom:2px}
 
