@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About — Prakriti, IISER Tirupati</title>
+<meta name="description" content="Prakriti is the Conservation Club of IISER Tirupati, a student club under the Student Activity Centre. Core team, faculty mentor and past coordinators.">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Noto+Sans+Telugu:wght@400;600&family=Public+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div id="site-header"></div>
+
+<main id="main">
+  <div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / About</nav></div>
+
+  <header class="pagehead"><div class="wrap">
+    <p class="eyebrow">About the club</p>
+    <h1>Prakriti</h1>
+    <p class="lede">Prakriti is the Conservation Club of IISER Tirupati &mdash; a student club running under the Student Activity Centre. We work on two things: conservation on our own campus, and a network that carries agricultural problems from farmers around Tirupati to researchers who can answer them.</p>
+    <p class="muted" style="font-size:14.5px">Prakriti is run by students. It is not an advisory service of the institute, and nothing on this site should be read as an official recommendation from IISER Tirupati.</p>
+  </div></header>
+
+  <section class="section"><div class="wrap">
+    <div class="sectionhead"><h2>Faculty mentor</h2></div>
+    <div id="mentor"></div>
+  </div></section>
+
+  <section class="section section--paper"><div class="wrap">
+    <div class="sectionhead"><h2>Coordinators</h2></div>
+    <div class="grid grid--2" id="coordinators"></div>
+  </div></section>
+
+  <section class="section"><div class="wrap">
+    <div class="sectionhead"><h2>Core team</h2>
+      <p>The club runs on five verticals. Each has a named owner, so when something stalls we know whose desk it is on.</p></div>
+    <div class="grid grid--3" id="core-team"></div>
+  </div></section>
+
+  <section class="section section--paper"><div class="wrap">
+    <div class="sectionhead"><h2>Past coordinators</h2>
+      <p>A register of everyone who has run this club and what was built during their tenure.</p></div>
+    <div id="past-coordinators"></div>
+  </div></section>
+
+  <section class="section" id="contact"><div class="wrap">
+    <div class="sectionhead"><h2>Contact</h2></div>
+    <div class="grid grid--2">
+      <article class="card">
+        <h3>Write to us</h3>
+        <p>One address for everything &mdash; general queries, researcher enquiries, school partnerships and suggestions. Say which one it is in the subject line and it reaches the right person faster.</p>
+        <p style="margin-top:12px"><a class="btn btn--primary" id="mail-link" href="#">Email Prakriti</a></p>
+      </article>
+      <article class="card">
+        <h3>Find us</h3>
+        <p>Student Activity Centre, IISER Tirupati, Karakambadi Road, Rami Reddy Nagar, Tirupati 517507, Andhra Pradesh.</p>
+        <p>We are also on Instagram, LinkedIn and X &mdash; links are in the footer.</p>
+      </article>
+    </div>
+  </div></section>
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/js/content.js"></script>
+<script src="assets/js/site.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("mail-link").href = "mailto:" + SITE.email;
+  });
+</script>
+</body>
+</html>
