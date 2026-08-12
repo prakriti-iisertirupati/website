@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Learn — Prakriti, IISER Tirupati</title>
+<meta name="description" content="Explainers, guides and teaching resources on ecology and conservation from Prakriti at IISER Tirupati.">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Noto+Sans+Telugu:wght@400;600&family=Public+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<main id="main">
+  <div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / Learn</nav></div>
+  <header class="pagehead"><div class="wrap">
+    <p class="eyebrow">Teaching material</p>
+    <h1>Learn</h1>
+    <p class="lede">Explainers, guides and reading lists on ecology and conservation &mdash; problems and their solutions, written in plain language. This section grows as the club produces material. If you would like to write or contribute a piece, get in touch.</p>
+  </div></header>
+
+  <section class="section"><div class="wrap">
+    <div class="grid grid--2" id="learn-list"></div>
+  </div></section>
+
+  <section class="section section--paper"><div class="wrap">
+    <div class="callout">
+      <h3 style="margin-bottom:6px">Contribute a resource</h3>
+      <p>Students, researchers and teachers are welcome to send in a topic, a draft, or a finished piece. We edit for clarity, credit you clearly, and publish here.</p>
+      <p style="margin:0"><a class="btn btn--secondary" id="learn-contact" href="#">Write to Prakriti</a></p>
+    </div>
+  </div></section>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var a = document.getElementById("learn-contact");
+      if (a) a.href = "mailto:" + SITE.email + "?subject=" + encodeURIComponent("Contribute to Learn — Prakriti");
+    });
+  </script>
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/content.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

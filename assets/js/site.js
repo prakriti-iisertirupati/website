@@ -9,8 +9,10 @@
   var NAV = [
     { href: "index.html",       label: "Home" },
     { href: "programmes.html",  label: "Programmes" },
+    { href: "news.html",        label: "News" },
     { href: "field-notes.html", label: "Field notes" },
     { href: "science.html",     label: "Science" },
+    { href: "learn.html",       label: "Learn" },
     { href: "our-work.html",    label: "Our work" },
     { href: "about.html",       label: "About" }
   ];
@@ -51,9 +53,9 @@
       '<div class="masthead"><div class="wrap masthead__in">' +
         '<a class="lockup" href="index.html">' +
           '<img src="assets/img/prakriti-logo.png" srcset="assets/img/prakriti-logo.png 1x, assets/img/prakriti-logo@2x.png 2x" alt="Prakriti">' +
-          '<span class="lockup__txt"><b>Prakriti</b><span>Conservation Club</span></span>' +
+          '<span class="lockup__txt"><b>Prakriti</b><span>Ecology &amp; Conservation Club · IISER Tirupati</span></span>' +
         "</a>" +
-        '<div class="masthead__inst"><b>IISER Tirupati</b>A student club under the Student Activity Centre</div>' +
+        '<div class="masthead__inst"><b>IISER Tirupati</b>A student club under SAC</div>' +
       "</div></div>" +
 
       '<nav class="mainnav" aria-label="Main"><div class="mainnav__in">' +
@@ -101,20 +103,31 @@
         '<div class="foot__grid">' +
           "<div>" +
             '<div class="foot__brand"><img src="assets/img/prakriti-mark.png" alt=""><b>Prakriti</b></div>' +
-            "The Conservation Club<br>Student Activity Centre<br>IISER Tirupati" +
+            "Ecology &amp; Conservation Club<br>A student club under SAC<br>IISER Tirupati" +
           "</div>" +
-          "<div><h4>Contact</h4><ul>" +
-            '<li><a href="mailto:' + esc(s.email) + '">' + esc(s.email) + "</a></li>" +
-            '<li><a href="mailto:' + esc(s.email) + '?subject=Researcher%20enquiry">Researcher enquiries</a></li>' +
-            '<li><a href="mailto:' + esc(s.email) + '?subject=School%20partnership">School partnerships</a></li>' +
+          "<div><h4>Contact us</h4>" +
+            "IISER Tirupati<br>Srinivasapuram, Yerpedu Mandal<br>Tirupati District, Andhra Pradesh<br>India — 517619" +
+            '<br><br><a href="mailto:' + esc(s.email) + '">' + esc(s.email) + "</a>" +
+          "</div>" +
+          "<div><h4>Important links</h4><ul>" +
+            '<li><a href="index.html">Home</a></li>' +
+            '<li><a href="news.html">News &amp; events</a></li>' +
+            '<li><a href="programmes.html">Programmes</a></li>' +
+            '<li><a href="field-notes.html">Field notes</a></li>' +
+            '<li><a href="about.html">About the club</a></li>' +
+          "</ul></div>" +
+          "<div><h4>Other links</h4><ul>" +
+            '<li><a href="learn.html">Learn</a></li>' +
+            '<li><a href="science.html">Science</a></li>' +
+            '<li><a href="our-work.html">Our work</a></li>' +
+            '<li><a href="https://www.iisertirupati.ac.in" target="_blank" rel="noopener">IISER Tirupati</a></li>' +
             '<li><a href="mailto:' + esc(s.email) + '?subject=Suggestion%20for%20Prakriti">Send a suggestion</a></li>' +
           "</ul></div>" +
           "<div><h4>Follow</h4><ul>" +
-            '<li><a href="' + esc(s.instagram) + '">Instagram</a></li>' +
-            '<li><a href="' + esc(s.linkedin) + '">LinkedIn</a></li>' +
-            '<li><a href="' + esc(s.twitter) + '">X (Twitter)</a></li>' + wa +
+            '<li><a href="' + esc(s.instagram) + '" target="_blank" rel="noopener">Instagram</a></li>' +
+            '<li><a href="' + esc(s.linkedin) + '" target="_blank" rel="noopener">LinkedIn</a></li>' +
+            '<li><a href="' + esc(s.twitter) + '" target="_blank" rel="noopener">X (Twitter)</a></li>' + wa +
           "</ul></div>" +
-          "<div><h4>Institute</h4>" + esc(s.address) + "</div>" +
         "</div>" +
         '<div class="foot__legal">' +
           "<span>Maintained by the Prakriti core team</span>" +
@@ -137,6 +150,12 @@
     });
     (typeof INITIATIVES !== "undefined" ? INITIATIVES : []).forEach(function (i) {
       idx.push({ kind: "Our work", title: i.title, extra: i.cadence + " " + i.summary, href: "our-work.html" });
+    });
+    (typeof NEWS !== "undefined" ? NEWS : []).forEach(function (n) {
+      idx.push({ kind: "News", title: n.title, extra: n.date + " " + n.summary, href: "news.html" });
+    });
+    (typeof LEARN !== "undefined" ? LEARN : []).forEach(function (l) {
+      idx.push({ kind: "Learn", title: l.title, extra: l.kind + " " + l.summary, href: "learn.html" });
     });
     (typeof REPORTS !== "undefined" ? REPORTS : []).forEach(function (r) {
       idx.push({ kind: "Report " + r.id, title: r.problem, extra: r.mandal + " " + r.crop, href: "field-notes.html" });
@@ -256,6 +275,26 @@
           "<h3>" + esc(i.title) + "</h3><p>" + esc(i.summary) + "</p></article>";
       }).join(""));
     }
+    if (el("news-list")) {
+      fill("news-list", NEWS.length
+        ? NEWS.map(function (n) {
+            return '<article class="card"><div class="card__meta">' + esc(n.date) + "</div>" +
+              "<h3>" + esc(n.title) + "</h3><p>" + esc(n.summary) + "</p></article>";
+          }).join("")
+        : '<p class="pending">No news yet — check back after the first programme.</p>');
+    }
+    if (el("home-news")) {
+      fill("home-news", NEWS.slice(0, 2).map(function (n) {
+        return '<article class="card"><div class="card__meta">' + esc(n.date) + "</div>" +
+          "<h3>" + esc(n.title) + "</h3><p>" + esc(n.summary) + "</p></article>";
+      }).join(""));
+    }
+    if (el("learn-list")) {
+      fill("learn-list", LEARN.map(function (l) {
+        return '<article class="card"><div class="card__meta">' + esc(l.kind) + "</div>" +
+          "<h3>" + esc(l.title) + "</h3><p>" + esc(l.summary) + "</p></article>";
+      }).join(""));
+    }
     if (el("mentor")) {
       fill("mentor", personCard(TEAM.mentor));
     }
@@ -265,7 +304,7 @@
     if (el("core-team")) {
       fill("core-team", TEAM.core.map(function (v) {
         var body = v.members.length
-          ? "<ul>" + v.members.map(function (m) {
+          ? '<ul class="teamlist">' + v.members.map(function (m) {
               return "<li>" + esc(m.name) + (m.role ? ' <span class="muted">— ' + esc(m.role) + "</span>" : "") + "</li>";
             }).join("") + "</ul>"
           : '<p class="muted">Members to be listed.</p>';

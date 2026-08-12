@@ -216,6 +216,9 @@ p{margin:0 0 1rem;max-width:68ch}
 .person__role{font-size:13.5px;color:var(--muted);margin-bottom:8px}
 .person p{font-size:14.5px;color:var(--ink-soft);margin:0 0 8px}
 
+.teamlist{margin:0;padding-left:18px;font-size:14.5px;color:var(--ink-soft);line-height:1.9}
+.teamlist li{margin-bottom:2px}
+
 .reg{width:100%;border-collapse:collapse;font-size:14.5px}
 .reg th{
   text-align:left;font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;
