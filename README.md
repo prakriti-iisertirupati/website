@@ -54,7 +54,21 @@ assets/js/site.js      header, footer, search, section rendering
 assets/css/style.css   all styling
 assets/img/            logo and icons
 ```
+---
 
+## Privacy rules
+
+These are not optional. Minors collect these reports and the source data
+contains farmers' phone numbers.
+
+- **Never** put a name, phone number or exact address in `REPORTS`. Mandal-level
+  location only.
+- Personal details stay in the private Google Sheet, which is never published
+  and never linked from the site.
+- Get consent before photographing anyone's face or land, and before publishing
+  any photograph of a person.
+
+---
 ## Design notes
 
 Palette: millet `#F5F0E6`, laterite `#8C3A24`, ochre `#C9853F`, deep green
