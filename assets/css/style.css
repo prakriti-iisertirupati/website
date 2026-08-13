@@ -216,6 +216,20 @@ p{margin:0 0 1rem;max-width:68ch}
 .person__role{font-size:13.5px;color:var(--muted);margin-bottom:8px}
 .person p{font-size:14.5px;color:var(--ink-soft);margin:0 0 8px}
 
+.scopetag{
+  display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;
+  text-transform:uppercase;padding:2px 7px;border-radius:2px;margin-left:6px;
+  background:var(--green-bg);color:var(--green-dark);border:1px solid #C6DBC4;
+}
+.scopetag--off{background:var(--ochre-bg);color:var(--ochre-text);border-color:#DFC08A}
+
+.statusbadge{
+  display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.07em;
+  text-transform:uppercase;padding:3px 9px;border-radius:2px;margin-bottom:10px;
+  background:var(--green-bg);color:var(--green-dark);border:1px solid #C6DBC4;
+}
+.statusbadge--planned{background:var(--ochre-bg);color:var(--ochre-text);border-color:#DFC08A}
+
 .copybtn{
   font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;
   background:none;border:1px solid #453D33;color:#D8CDB8;

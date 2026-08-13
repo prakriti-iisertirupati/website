@@ -8,12 +8,12 @@
 
   var NAV = [
     { href: "index.html",       label: "Home" },
-    { href: "programmes.html",  label: "Programmes" },
+    { href: "events.html",      label: "Events" },
     { href: "news.html",        label: "News" },
     { href: "field-notes.html", label: "Field notes" },
     { href: "science.html",     label: "Science" },
     { href: "learn.html",       label: "Learn" },
-    { href: "our-work.html",    label: "Our work" },
+    { href: "sustainability.html", label: "Sustainability" },
     { href: "about.html",       label: "About" }
   ];
 
@@ -40,6 +40,22 @@
       return '<a href="' + n.href + '"' + cur + ">" + esc(n.label) + "</a>";
     }).join("");
 
+    var promoted = (typeof NEWS !== "undefined" ? NEWS : []).filter(function (n) { return n.promote; })[0];
+    var strip = "";
+    if (promoted) {
+      strip = '<div class="announce"><div class="wrap announce__in">' +
+        '<span class="tag">Announcement</span>' +
+        '<span class="announce__txt">' + esc(promoted.title) + "</span>" +
+        '<a href="news.html">More</a>' +
+      "</div></div>";
+    } else if (typeof ANNOUNCE !== "undefined" && ANNOUNCE.show) {
+      strip = '<div class="announce"><div class="wrap announce__in">' +
+        '<span class="tag">' + esc(ANNOUNCE.tag) + "</span>" +
+        '<span class="announce__txt">' + esc(ANNOUNCE.text) + "</span>" +
+        (ANNOUNCE.link ? '<a href="' + esc(ANNOUNCE.link) + '">Details</a>' : "") +
+      "</div></div>";
+    }
+
     slot.innerHTML =
       '<div class="topbar"><div class="wrap topbar__in">' +
         '<span class="topbar__name">Indian Institute of Science Education and Research Tirupati</span>' +
@@ -63,14 +79,7 @@
         '<div class="mainnav__links" id="navlinks">' + links + "</div>" +
         '<button class="navsearch" type="button" id="searchopen" aria-label="Search this site">Search</button>' +
       "</div></nav>" +
-
-      (typeof ANNOUNCE !== "undefined" && ANNOUNCE.show
-        ? '<div class="announce"><div class="wrap announce__in">' +
-            '<span class="tag">' + esc(ANNOUNCE.tag) + "</span>" +
-            '<span class="announce__txt">' + esc(ANNOUNCE.text) + "</span>" +
-            (ANNOUNCE.link ? '<a href="' + esc(ANNOUNCE.link) + '">Details</a>' : "") +
-          "</div></div>"
-        : "");
+      strip;
 
     var toggle = slot.querySelector(".navtoggle");
     toggle.addEventListener("click", function () {
@@ -112,15 +121,15 @@
           "</div>" +
           "<div><h4>Important links</h4><ul>" +
             '<li><a href="index.html">Home</a></li>' +
-            '<li><a href="news.html">News &amp; events</a></li>' +
-            '<li><a href="programmes.html">Programmes</a></li>' +
+            '<li><a href="news.html">News &amp; announcements</a></li>' +
+            '<li><a href="events.html">Events &amp; activities</a></li>' +
             '<li><a href="field-notes.html">Field notes</a></li>' +
             '<li><a href="about.html">About the club</a></li>' +
           "</ul></div>" +
           "<div><h4>Other links</h4><ul>" +
             '<li><a href="learn.html">Learn</a></li>' +
             '<li><a href="science.html">Science</a></li>' +
-            '<li><a href="our-work.html">Our work</a></li>' +
+            '<li><a href="sustainability.html">Sustainability on campus</a></li>' +
             '<li><a href="https://www.iisertirupati.ac.in" target="_blank" rel="noopener">IISER Tirupati</a></li>' +
             '<li><a href="mailto:' + esc(s.email) + '?subject=Suggestion%20for%20Prakriti">Send a suggestion</a></li>' +
           "</ul></div>" +
@@ -163,13 +172,13 @@
 
     NAV.forEach(function (n) { idx.push({ kind: "Page", title: n.label, href: n.href }); });
     (typeof EVENTS !== "undefined" ? EVENTS : []).forEach(function (e) {
-      idx.push({ kind: "Programme", title: e.title, extra: e.when + " " + e.kind + " " + e.summary, href: "programmes.html" });
+      idx.push({ kind: "Event", title: e.title, extra: e.when + " " + e.kind + " " + e.summary, href: "events.html" });
     });
     (typeof SCIENCE !== "undefined" ? SCIENCE : []).forEach(function (s) {
       idx.push({ kind: "Science", title: s.title, extra: s.problem + " " + s.science, href: "science.html" });
     });
     (typeof INITIATIVES !== "undefined" ? INITIATIVES : []).forEach(function (i) {
-      idx.push({ kind: "Our work", title: i.title, extra: i.cadence + " " + i.summary, href: "our-work.html" });
+      idx.push({ kind: "Sustainability", title: i.title, extra: i.status + " " + i.summary, href: "sustainability.html" });
     });
     (typeof NEWS !== "undefined" ? NEWS : []).forEach(function (n) {
       idx.push({ kind: "News", title: n.title, extra: n.date + " " + n.summary, href: "news.html" });
@@ -217,8 +226,11 @@
 
   /* ---------- page sections ---------- */
   function eventCard(e) {
+    var scopeTag = e.scope === "off"
+      ? '<span class="scopetag scopetag--off">Off campus</span>'
+      : '<span class="scopetag">On campus</span>';
     return '<article class="card">' +
-      '<div class="card__meta">' + esc(e.when) + " &middot; " + esc(e.kind) + "</div>" +
+      '<div class="card__meta">' + esc(e.when) + " &middot; " + esc(e.kind) + " " + scopeTag + "</div>" +
       "<h3>" + esc(e.title) + "</h3>" +
       "<p>" + esc(e.summary) + "</p>" +
       '<div class="card__foot">' + esc(e.venue) + "</div></article>";
@@ -264,18 +276,24 @@
   function buildPage() {
     var upcoming = (typeof EVENTS !== "undefined" ? EVENTS : []).filter(function (e) { return e.status === "upcoming"; });
     var past = (typeof EVENTS !== "undefined" ? EVENTS : []).filter(function (e) { return e.status === "past"; });
+    var onCampus = upcoming.filter(function (e) { return e.scope !== "off"; });
+    var offCampus = upcoming.filter(function (e) { return e.scope === "off"; });
 
     if (el("home-events")) {
       fill("home-events", upcoming.slice(0, 3).map(eventCard).join("") ||
-        '<p class="pending">No programmes listed yet.</p>');
+        '<p class="pending">No events listed yet.</p>');
     }
-    if (el("all-upcoming")) {
-      fill("all-upcoming", upcoming.map(eventCard).join("") ||
-        '<p class="pending">Nothing scheduled at the moment. Check back after the semester calendar is confirmed.</p>');
+    if (el("events-oncampus")) {
+      fill("events-oncampus", onCampus.map(eventCard).join("") ||
+        '<p class="pending">Nothing scheduled on campus at the moment.</p>');
     }
-    if (el("all-past")) {
-      fill("all-past", past.map(eventCard).join("") ||
-        '<p class="pending">The archive fills up as programmes finish. Nothing here yet.</p>');
+    if (el("events-offcampus")) {
+      fill("events-offcampus", offCampus.map(eventCard).join("") ||
+        '<p class="pending">No off-campus trips scheduled yet. These need approval lead time, so they are confirmed a few weeks ahead.</p>');
+    }
+    if (el("events-past")) {
+      fill("events-past", past.map(eventCard).join("") ||
+        '<p class="pending">The archive fills up as events finish.</p>');
     }
     if (el("reports-board")) {
       fill("reports-board", REPORTS.map(reportRow).join(""));
@@ -291,7 +309,9 @@
     }
     if (el("initiatives")) {
       fill("initiatives", INITIATIVES.map(function (i) {
-        return '<article class="card"><div class="card__meta">' + esc(i.cadence) + "</div>" +
+        var planned = /planned/i.test(i.status);
+        var badge = '<span class="statusbadge' + (planned ? ' statusbadge--planned' : '') + '">' + esc(i.status) + "</span>";
+        return '<article class="card">' + badge +
           "<h3>" + esc(i.title) + "</h3><p>" + esc(i.summary) + "</p></article>";
       }).join(""));
     }
