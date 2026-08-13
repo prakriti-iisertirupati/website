@@ -141,6 +141,7 @@
         '<div class="foot__legal">' +
           "<span>Maintained by the Prakriti core team</span>" +
           "<span>Faculty mentor: " + esc(TEAM.mentor.name) + "</span>" +
+          '<span><a href="privacy.html">Privacy &amp; consent</a></span>' +
         "</div>" +
       "</div></footer>";
 
