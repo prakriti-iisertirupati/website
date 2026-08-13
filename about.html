@@ -1,272 +1,131 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>About — Prakriti, IISER Tirupati</title>
-    <meta
-      name="description"
-      content="Prakriti is the Ecology and Conservation Club of IISER Tirupati, a student club under SAC. Core team, faculty mentor and past coordinators."
-    />
-    <link rel="icon" href="assets/img/favicon.png" />
-    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Noto+Sans+Telugu:wght@400;600&family=Public+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body>
-    <a class="skip" href="#main">Skip to content</a>
-    <div id="site-header"></div>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About — Prakriti, IISER Tirupati</title>
+<meta name="description" content="Prakriti is the Ecology and Conservation Club of IISER Tirupati, a student club under SAC. Core team, faculty mentor and past coordinators.">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Noto+Sans+Telugu:wght@400;600&family=Public+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div id="site-header"></div>
 
-    <main id="main">
-      <div class="wrap">
-        <nav class="crumbs" aria-label="Breadcrumb">
-          <a href="index.html">Home</a> / About
-        </nav>
+<main id="main">
+  <div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / About</nav></div>
+
+  <header class="pagehead"><div class="wrap">
+    <p class="eyebrow">About the club</p>
+    <h1>Prakriti</h1>
+    <p class="lede">Prakriti is the Ecology and Conservation Club of IISER Tirupati &mdash; a student club running under SAC. We work across many fronts: waste management, cartography, campus biodiversity surveys, native sapling drives, and, most recently, a farmer&ndash;researcher network that carries agricultural problems from the villages around Tirupati to scientists who can help. That last one is a new initiative; more will follow as the club grows.</p>
+    <p class="muted" style="font-size:14.5px">Prakriti is run by students. It is not an advisory service of the institute, and nothing on this site should be read as an official recommendation from IISER Tirupati.</p>
+  </div></header>
+
+  <section class="section section--paper"><div class="wrap">
+    <blockquote style="font-family:var(--serif);font-size:clamp(19px,2.2vw,25px);line-height:1.45;color:var(--ink);border-left:4px solid var(--laterite);padding:6px 0 6px 22px;margin:0;max-width:60ch">
+      At the Indian Institute of Science Education and Research Tirupati, a set of individuals have decided to step up with a vision of a society wherein every common citizen should be involved in conservation &mdash; actively or passively &mdash; with a hope that each individual action will result in a <strong>giant</strong> push towards a sustained future.
+    </blockquote>
+  </div></section>
+
+  <section class="section"><div class="wrap">
+    <div class="sectionhead"><h2>Faculty mentor</h2></div>
+    <div id="mentor"></div>
+  </div></section>
+
+  <section class="section section--paper"><div class="wrap">
+    <div class="sectionhead"><h2>Coordinators</h2></div>
+    <div class="grid grid--2" id="coordinators"></div>
+  </div></section>
+
+  <section class="section"><div class="wrap">
+    <div class="sectionhead"><h2>Core team</h2>
+      <p>The club runs on five verticals. Each has a named owner, so when something stalls we know whose desk it is on.</p></div>
+    <div class="grid grid--3" id="core-team"></div>
+  </div></section>
+
+  <section class="section section--paper"><div class="wrap">
+    <div class="sectionhead"><h2>Past coordinators</h2>
+      <p>A register of everyone who has run this club and what was built during their tenure.</p></div>
+    <div id="past-coordinators"></div>
+  </div></section>
+
+  <section class="section" id="contact"><div class="wrap">
+    <div class="sectionhead"><h2>Contact</h2>
+      <p>Write to us with the form below, or email the club directly. General queries, researcher enquiries, school partnerships and suggestions all reach the same place.</p></div>
+    <div class="grid grid--2">
+      <div>
+        <form id="contactForm" novalidate>
+          <div class="field">
+            <label for="c_name">Your name</label>
+            <input id="c_name" name="name" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="c_email">Your email</label>
+            <input id="c_email" name="email" type="email" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="c_topic">This is about</label>
+            <select id="c_topic" name="topic">
+              <option>General enquiry</option>
+              <option>I'm a researcher</option>
+              <option>School partnership</option>
+              <option>A suggestion</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="c_message">Message</label>
+            <textarea id="c_message" name="message" required></textarea>
+          </div>
+          <p><button type="submit" class="btn btn--primary btn--wide">Send message</button></p>
+          <p class="status" id="c_status" role="status" aria-live="polite"></p>
+          <p class="formnote">This opens your own email app with the message ready to send. We usually reply within a few days.</p>
+        </form>
       </div>
+      <div>
+        <article class="card">
+          <h3>Reach us directly</h3>
+          <p style="margin-bottom:10px"><a id="c_mail" href="#">prakriti@sac.iisertirupati.ac.in</a></p>
+          <p>IISER Tirupati<br>Srinivasapuram, Yerpedu Mandal<br>Tirupati District, Andhra Pradesh<br>India &mdash; 517619</p>
+          <p style="margin:0">We are also on Instagram, LinkedIn and X &mdash; links are in the footer.</p>
+        </article>
+      </div>
+    </div>
+  </div></section>
 
-      <header class="pagehead">
-        <div class="wrap">
-          <p class="eyebrow">About the club</p>
-          <h1>Prakriti</h1>
-          <p class="lede">
-            Prakriti is the Ecology and Conservation Club of IISER Tirupati
-            &mdash; a student club running under SAC. We work across many
-            fronts: waste management, cartography, campus biodiversity surveys,
-            native sapling drives, and, most recently, a farmer&ndash;researcher
-            network that carries agricultural problems from the villages around
-            Tirupati to scientists who can help. That last one is a new
-            initiative; more will follow as the club grows.
-          </p>
-          <p class="muted" style="font-size: 14.5px">
-            Prakriti is run by students. It is not an advisory service of the
-            institute, and nothing on this site should be read as an official
-            recommendation from IISER Tirupati.
-          </p>
-        </div>
-      </header>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("c_mail").href = "mailto:" + SITE.email;
 
-      <section class="section section--paper">
-        <div class="wrap">
-          <blockquote
-            style="
-              font-family: var(--serif);
-              font-size: clamp(19px, 2.2vw, 25px);
-              line-height: 1.45;
-              color: var(--ink);
-              border-left: 4px solid var(--laterite);
-              padding: 6px 0 6px 22px;
-              margin: 0;
-              max-width: 60ch;
-            "
-          >
-            At the Indian Institute of Science Education and Research Tirupati,
-            a set of individuals have decided to step up with a vision of a
-            society wherein every common citizen should be involved in
-            conservation &mdash; actively or passively &mdash; with a hope that
-            each individual action will result in a <strong>giant</strong> push
-            towards a sustained future.
-          </blockquote>
-        </div>
-      </section>
+    var form = document.getElementById("contactForm");
+    var st = document.getElementById("c_status");
+    function say(m, tone){ st.textContent = m; st.dataset.tone = tone || ""; }
 
-      <section class="section">
-        <div class="wrap">
-          <div class="sectionhead"><h2>Faculty mentor</h2></div>
-          <div id="mentor"></div>
-        </div>
-      </section>
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (!form.name.value.trim() || !form.email.value.trim() || !form.message.value.trim()) {
+        return say("Please fill in your name, email and message.", "err");
+      }
+      var body = "Name: " + form.name.value.trim() +
+                 "\nEmail: " + form.email.value.trim() +
+                 "\nTopic: " + form.topic.value +
+                 "\n\n" + form.message.value.trim();
+      window.location.href = "mailto:" + SITE.email +
+        "?subject=" + encodeURIComponent("Website enquiry — " + form.topic.value) +
+        "&body=" + encodeURIComponent(body);
+      say("Your email app is opening with the message ready to send.", "ok");
+    });
+  });
+  </script>
+</main>
 
-      <section class="section section--paper">
-        <div class="wrap">
-          <div class="sectionhead"><h2>Coordinators</h2></div>
-          <div class="grid grid--2" id="coordinators"></div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="wrap">
-          <div class="sectionhead">
-            <h2>Core team</h2>
-            <p>
-              The club runs on five verticals. Each has a named owner, so when
-              something stalls we know whose desk it is on.
-            </p>
-          </div>
-          <div class="grid grid--3" id="core-team"></div>
-        </div>
-      </section>
-
-      <section class="section section--paper">
-        <div class="wrap">
-          <div class="sectionhead">
-            <h2>Past coordinators</h2>
-            <p>
-              A register of everyone who has run this club and what was built
-              during their tenure.
-            </p>
-          </div>
-          <div id="past-coordinators"></div>
-        </div>
-      </section>
-
-      <section class="section" id="contact">
-        <div class="wrap">
-          <div class="sectionhead">
-            <h2>Contact</h2>
-            <p>
-              Write to us with the form below, or email the club directly.
-              General queries, researcher enquiries, school partnerships and
-              suggestions all reach the same place.
-            </p>
-          </div>
-          <div class="grid grid--2">
-            <div>
-              <form id="contactForm" novalidate>
-                <div class="field">
-                  <label for="c_name">Your name</label>
-                  <input id="c_name" name="name" required autocomplete="name" />
-                </div>
-                <div class="field">
-                  <label for="c_email">Your email</label>
-                  <input
-                    id="c_email"
-                    name="email"
-                    type="email"
-                    required
-                    autocomplete="email"
-                  />
-                </div>
-                <div class="field">
-                  <label for="c_topic">This is about</label>
-                  <select id="c_topic" name="topic">
-                    <option>General enquiry</option>
-                    <option>I'm a researcher</option>
-                    <option>School partnership</option>
-                    <option>A suggestion</option>
-                    <option>Something else</option>
-                  </select>
-                </div>
-                <div class="field">
-                  <label for="c_message">Message</label>
-                  <textarea id="c_message" name="message" required></textarea>
-                </div>
-                <p>
-                  <button type="submit" class="btn btn--primary btn--wide">
-                    Send message
-                  </button>
-                </p>
-                <p
-                  class="status"
-                  id="c_status"
-                  role="status"
-                  aria-live="polite"
-                ></p>
-                <p class="formnote">
-                  Goes straight to the club inbox. We usually reply within a few
-                  days.
-                </p>
-              </form>
-            </div>
-            <div>
-              <article class="card">
-                <h3>Reach us directly</h3>
-                <p style="margin-bottom: 10px">
-                  <a id="c_mail" href="#">prakriti@sac.iisertirupati.ac.in</a>
-                </p>
-                <p>
-                  IISER Tirupati<br />Srinivasapuram, Yerpedu Mandal<br />Tirupati
-                  District, Andhra Pradesh<br />India &mdash; 517619
-                </p>
-                <p style="margin: 0">
-                  We are also on Instagram, LinkedIn and X &mdash; links are in
-                  the footer.
-                </p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          document.getElementById("c_mail").href = "mailto:" + SITE.email;
-
-          // Formspree endpoint. Replace FORM_ID after creating a free form at formspree.io.
-          var FORMSPREE = "https://formspree.io/f/xljrnpjd";
-          var form = document.getElementById("contactForm");
-          var st = document.getElementById("c_status");
-          function say(m, tone) {
-            st.textContent = m;
-            st.dataset.tone = tone || "";
-          }
-
-          form.addEventListener("submit", function (e) {
-            e.preventDefault();
-            if (
-              !form.name.value.trim() ||
-              !form.email.value.trim() ||
-              !form.message.value.trim()
-            ) {
-              return say("Please fill in your name, email and message.", "err");
-            }
-            if (!FORMSPREE) {
-              // Fallback until Formspree is connected: open the user's mail app, pre-filled.
-              var body =
-                "Name: " +
-                form.name.value.trim() +
-                "\nEmail: " +
-                form.email.value.trim() +
-                "\nTopic: " +
-                form.topic.value +
-                "\n\n" +
-                form.message.value.trim();
-              window.location.href =
-                "mailto:" +
-                SITE.email +
-                "?subject=" +
-                encodeURIComponent("Website enquiry — " + form.topic.value) +
-                "&body=" +
-                encodeURIComponent(body);
-              return say(
-                "Opening your email app with the message ready to send.",
-                "ok",
-              );
-            }
-            say("Sending…");
-            fetch(FORMSPREE, {
-              method: "POST",
-              headers: { Accept: "application/json" },
-              body: new FormData(form),
-            })
-              .then(function (r) {
-                if (r.ok) {
-                  form.reset();
-                  say("Thanks — your message has been sent.", "ok");
-                } else {
-                  say(
-                    "Something went wrong. Please email us directly instead.",
-                    "err",
-                  );
-                }
-              })
-              .catch(function () {
-                say(
-                  "Something went wrong. Please email us directly instead.",
-                  "err",
-                );
-              });
-          });
-        });
-      </script>
-    </main>
-
-    <div id="site-footer"></div>
-    <script src="assets/js/content.js"></script>
-    <script src="assets/js/site.js"></script>
-  </body>
+<div id="site-footer"></div>
+<script src="assets/js/content.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
 </html>

@@ -105,7 +105,6 @@
     var slot = el("site-footer");
     if (!slot) return;
     var s = SITE;
-    var wa = s.whatsapp ? '<li><a href="https://wa.me/' + esc(s.whatsapp) + '">WhatsApp</a></li>' : "";
 
     slot.innerHTML =
       '<footer class="foot"><div class="wrap">' +
@@ -136,7 +135,7 @@
           "<div><h4>Follow</h4><ul>" +
             '<li><a href="' + esc(s.instagram) + '" target="_blank" rel="noopener">Instagram</a></li>' +
             '<li><a href="' + esc(s.linkedin) + '" target="_blank" rel="noopener">LinkedIn</a></li>' +
-            '<li><a href="' + esc(s.twitter) + '" target="_blank" rel="noopener">X (Twitter)</a></li>' + wa +
+            '<li><a href="' + esc(s.twitter) + '" target="_blank" rel="noopener">X (Twitter)</a></li>' +
           "</ul></div>" +
         "</div>" +
         '<div class="foot__legal">' +
@@ -296,10 +295,14 @@
         '<p class="pending">The archive fills up as events finish.</p>');
     }
     if (el("reports-board")) {
-      fill("reports-board", REPORTS.map(reportRow).join(""));
+      fill("reports-board", REPORTS.length
+        ? REPORTS.map(reportRow).join("")
+        : '<p class="pending">No reports on the board yet. As farmers and students start sending them in, they will appear here — each one anonymised, with only the mandal and crop shown.</p>');
     }
     if (el("home-reports")) {
-      fill("home-reports", REPORTS.slice(0, 3).map(reportRow).join(""));
+      fill("home-reports", REPORTS.length
+        ? REPORTS.slice(0, 3).map(reportRow).join("")
+        : '<p class="pending">The board is ready and waiting for its first reports.</p>');
     }
     if (el("science-list")) {
       fill("science-list", SCIENCE.map(sciCard).join(""));

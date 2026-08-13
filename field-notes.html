@@ -29,7 +29,7 @@
     <div class="grid grid--2">
       <div>
         <h2 class="tr" data-en="Tell us what is going wrong" data-te="ఏమి సమస్య ఉందో చెప్పండి">Tell us what is going wrong</h2>
-        <p class="tr" data-en="Fill in what you can. Only the village and the problem are needed. If typing is difficult, use the WhatsApp button and send a voice note instead." data-te="మీకు తెలిసినది నింపండి. గ్రామం, సమస్య మాత్రమే అవసరం. టైప్ చేయడం కష్టమైతే, వాట్సాప్ బటన్ ఉపయోగించి వాయిస్ నోట్ పంపండి.">Fill in what you can. Only the village and the problem are needed. If typing is difficult, use the WhatsApp button and send a voice note instead.</p>
+        <p class="tr" data-en="Fill in what you can. Only the village and the problem are needed. When you send it, your email app opens with everything filled in, ready to go to us." data-te="మీకు తెలిసినది నింపండి. గ్రామం, సమస్య మాత్రమే అవసరం. పంపినప్పుడు, మీ ఇమెయిల్ యాప్ అన్ని వివరాలతో తెరుచుకుంటుంది.">Fill in what you can. Only the village and the problem are needed. When you send it, your email app opens with everything filled in, ready to go to us.</p>
 
         <form id="reportForm" novalidate>
           <div class="field">
@@ -56,7 +56,7 @@
             <label for="f_problem" class="tr" data-en="What is the problem?" data-te="సమస్య ఏమిటి?">What is the problem?</label>
             <textarea id="f_problem" name="problem" required></textarea>
           </div>
-          <p><button type="button" class="btn btn--primary btn--wide tr" id="waBtn" data-en="Send on WhatsApp" data-te="వాట్సాప్‌లో పంపండి">Send on WhatsApp</button></p>
+          <p><button type="button" class="btn btn--primary btn--wide tr" id="sendBtn" data-en="Send this report" data-te="ఈ నివేదికను పంపండి">Send this report</button></p>
           <p class="status" id="status" role="status" aria-live="polite"></p>
           <p class="formnote tr" data-en="We never publish or sell your phone number. Only the problem, the mandal and the crop appear on the public board." data-te="మీ ఫోన్ నంబర్‌ను మేము ఎప్పుడూ ప్రచురించము. సమస్య, మండలం, పంట మాత్రమే బహిరంగంగా కనిపిస్తాయి.">We never publish or sell your phone number. Only the problem, the mandal and the crop appear on the public board.</p>
         </form>
@@ -125,21 +125,22 @@ document.addEventListener("DOMContentLoaded", function () {
   var form = document.getElementById("reportForm"), st = document.getElementById("status");
   function say(m, tone) { st.textContent = m; st.dataset.tone = tone || ""; }
 
-  document.getElementById("waBtn").addEventListener("click", function () {
+  document.getElementById("sendBtn").addEventListener("click", function () {
     var place = form.place.value.trim(), problem = form.problem.value.trim();
     if (!place)   return say(te ? "గ్రామం, మండలం రాయండి." : "Add the village and mandal.", "err");
     if (!problem) return say(te ? "సమస్యను రాయండి." : "Describe the problem before sending.", "err");
-    if (!SITE.whatsapp) return say("The WhatsApp number is not set up yet. Please email " + SITE.email + " instead.", "err");
 
-    var t = "New field report — Prakriti\n\n" +
+    var body = "New field report — Prakriti\n\n" +
       "Village/mandal: " + place + "\n" +
       (form.name.value.trim()  ? "Name: "  + form.name.value.trim()  + "\n" : "") +
       (form.phone.value.trim() ? "Phone: " + form.phone.value.trim() + "\n" : "") +
       (form.crop.value.trim()  ? "Crop: "  + form.crop.value.trim()  + "\n" : "") +
-      "\nProblem:\n" + problem + "\n\n(Attach a photo or voice note here.)";
-    window.open("https://wa.me/" + SITE.whatsapp + "?text=" + encodeURIComponent(t), "_blank");
-    say(te ? "వాట్సాప్ తెరుచుకుంటుంది — అక్కడ పంపండి, ఫోటో ఉంటే జతచేయండి."
-           : "WhatsApp is opening. Press send there, and attach a photo if you have one.", "ok");
+      "\nProblem:\n" + problem + "\n\nIf you have a photo of the damage, please attach it to this email before sending.";
+    window.location.href = "mailto:" + SITE.email +
+      "?subject=" + encodeURIComponent("Field report — " + place) +
+      "&body=" + encodeURIComponent(body);
+    say(te ? "మీ ఇమెయిల్ యాప్ తెరుచుకుంటుంది — అక్కడ పంపండి, ఫోటో ఉంటే జతచేయండి."
+           : "Your email app is opening with the report ready. Press send there, and attach a photo if you have one.", "ok");
   });
 });
 </script>
