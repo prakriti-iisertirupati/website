@@ -37,109 +37,116 @@ const ANNOUNCE = {
    kind:   Talk / Field / Screening / Workshop / Debate /
            Walk / Social / Exhibition / Session                */
 const EVENTS = [
-  /* ---- UPCOMING ---- */
   {
-    title: "Film screening 1",
+    title: "Film screening",
     kind: "Screening",
-    when: "Fri 28 August",
+    when: "Fri 18 September, 6:00 PM",
     venue: "IISER Tirupati campus",
     scope: "on",
     status: "upcoming",
     summary:
-      "The first screening of the semester, followed by an open discussion. We pick a film that opens up a real environmental question rather than one that simply informs.",
+      "A screening followed by open discussion. We pick films that open up a real environmental question rather than ones that simply inform.",
+  },
+  {
+    title: "Orientation — meet Prakriti",
+    kind: "Session",
+    when: "Sat 19 September, 5:00 PM",
+    venue: "IISER Tirupati campus",
+    scope: "on",
+    status: "upcoming",
+    summary:
+      "An introduction to the club for the new batch: the work we actually do, the five verticals, and how to join one. Open to anyone curious, whether or not you intend to sign up.",
   },
   {
     title: "Ice breaker session",
     kind: "Session",
-    when: "Fri 11 September",
+    when: "Sun 20 September, 5:00 PM",
     venue: "IISER Tirupati campus",
     scope: "on",
     status: "upcoming",
     summary:
-      "An informal evening to welcome the new batch and introduce what the club does across the year.",
+      "An informal evening to welcome the new batch and meet the people already doing the work. The EcoVoices debate motions are released at the end of the session.",
   },
   {
     title: "Campus ecology walk",
     kind: "Walk",
-    when: "Sat 19 September",
+    when: "Sat 26 September, 6:30 AM",
     venue: "IISER Tirupati campus",
     scope: "on",
     status: "upcoming",
     summary:
-      "A morning walk mapping the campus's own biodiversity — what grows and lives here, and where.",
-  },
-  {
-    title: "Guest talk 1 — waste management",
-    kind: "Talk",
-    when: "Wed 30 September",
-    venue: "IISER Tirupati campus",
-    scope: "on",
-    status: "upcoming",
-    summary:
-      "A practitioner's view of how waste actually moves and where it ends up. The EcoVoices debate motions are released at this talk.",
-  },
-  {
-    title: "Film screening 2 — Kiss the Ground",
-    kind: "Screening",
-    when: "Fri 9 October",
-    venue: "IISER Tirupati campus",
-    scope: "on",
-    status: "upcoming",
-    summary:
-      "On soil health and regenerative agriculture — the groundwork for the hardware workshop and the field trip that follow.",
-  },
-  {
-    title: "Hardware workshop — conservation technology",
-    kind: "Workshop",
-    when: "Sat 17 October",
-    venue: "IISER Tirupati campus",
-    scope: "on",
-    status: "upcoming",
-    summary:
-      "A hands-on session building low-cost sensing hardware for environmental and agricultural monitoring.",
-  },
-  {
-    title: "Guest talk 2 — agricultural challenges",
-    kind: "Talk",
-    when: "Wed 21 October",
-    venue: "IISER Tirupati campus",
-    scope: "on",
-    status: "upcoming",
-    summary:
-      "On the real problems facing farmers in this region, connecting the workshop to the field trip.",
+      "A morning mapping our own campus — species, drainage lines, invasive patches, soil transitions. Groups record observations and coordinates, and everything is consolidated into a single campus biodiversity map that we publish.",
   },
   {
     title: "EcoVoices debate",
     kind: "Debate",
-    when: "Sat 24 October",
+    when: "Sun 27 September, 3:00 PM",
     venue: "IISER Tirupati campus",
     scope: "on",
     status: "upcoming",
     summary:
-      "The club's marquee event — a full-day inter-batch debate on questions of campus ecology and environmental policy.",
+      "The club's marquee event — an inter-batch debate on questions of campus ecology and environmental policy. Teams of three, mixed-year teams welcome. Motions are released at the ice breaker session the week before.",
   },
   {
-    title: "Film screening 3 — semester wrap",
+    title: "Guest talk 1 — waste management",
+    kind: "Talk",
+    when: "Sat 3 October, 3:00 PM",
+    venue: "IISER Tirupati campus",
+    scope: "on",
+    status: "upcoming",
+    summary:
+      "A practitioner's view of how waste actually moves through a city of this size and where it ends up — segregation, the informal sector, and what fails at scale.",
+  },
+  {
+    title: "Film screening",
     kind: "Screening",
-    when: "Fri 20 November",
+    when: "Sun 18 October, 6:00 PM",
     venue: "IISER Tirupati campus",
     scope: "on",
     status: "upcoming",
     summary:
-      "The closing screening of the semester, paired with a look back at the year's work.",
+      "The second screening of the semester, followed by an open discussion.",
   },
   {
-    title: "Field trip & social campaign",
+    title: "Guest talk 2 — agricultural challenges",
+    kind: "Talk",
+    when: "Sat 24 October, 3:00 PM",
+    venue: "IISER Tirupati campus",
+    scope: "on",
+    status: "upcoming",
+    summary:
+      "Extension scientists from the region on the problems farmers around Tirupati are actually bringing to them this season, and where the existing system runs out of answers. Held the day before the hardware workshop, so participants hear the problem before they build for it.",
+  },
+  {
+    title: "Hardware workshop — conservation technology",
+    kind: "Workshop",
+    when: "Sun 25 October, 9:00 AM",
+    venue: "IISER Tirupati campus",
+    scope: "on",
+    status: "upcoming",
+    summary:
+      "A full-day build session in conservation instrumentation. Teams assemble and calibrate low-cost soil moisture and temperature logging nodes, and the working ones go out on the December field trip.",
+  },
+  {
+    title: "Film screening",
+    kind: "Screening",
+    when: "Sun 1 November, 6:00 PM",
+    venue: "IISER Tirupati campus",
+    scope: "on",
+    status: "upcoming",
+    summary:
+      "The closing screening of the semester, followed by an open discussion and a look back at the semester's work.",
+  },
+  {
+    title: "Field trip — Chittoor district",
     kind: "Field",
-    when: "Sat 31 October – Sun 1 November",
-    venue: "Off campus — site to be confirmed",
+    when: "From Tue 1 December, after end-semester exams",
+    venue: "Off campus — village cluster in Chittoor district",
     scope: "off",
     status: "upcoming",
     summary:
-      "A two-day trip taking students out to a working site, paired with a public campaign. Requires off-campus approval; planning begins ten weeks ahead.",
+      "A visit to a village cluster in Chittoor district: farmer interviews, deployment of the instruments built at the hardware workshop, and a session with school students on filing field reports. Registration opens in November.",
   },
-
-  /* ---- PAST ---- */
   {
     title: "EcoQuest — National Science Day showcase",
     kind: "Exhibition",
@@ -169,6 +176,13 @@ const EVENTS = [
    date: free text, e.g. "August 2026" or "Coming up"          */
 const NEWS = [
   {
+    date: "September 2026",
+    title: "New batch — join Prakriti",
+    summary:
+      "Orientation is on Sat 19 September at 5:00 PM, followed by the ice breaker on Sun 20 September, where the EcoVoices debate motions are released. Come to either to meet the team and find out how to join one of the five verticals.",
+    promote: true,
+  },
+  {
     date: "August 2026",
     title: "The website is live",
     summary:
@@ -179,7 +193,7 @@ const NEWS = [
     date: "Coming up",
     title: "New semester of events begins",
     summary:
-      "Film screenings, guest talks, a campus ecology walk, the EcoVoices debate, a hardware workshop and a field trip are all coming this semester. See the Events page for dates.",
+      "Film screenings, guest talks, a campus ecology walk, the EcoVoices debate and a hardware workshop are all coming this semester, followed by a field trip in December. See the Events page for dates.",
     promote: false,
   },
 ];
@@ -258,6 +272,12 @@ const INITIATIVES = [
     status: "Planned",
     summary:
       "A common space where unused but usable things — stationery, books, supplies — can be left for others to take, cutting waste and helping students who need them.",
+  },
+  {
+    title: "Fountain bog filter",
+    status: "Planned",
+    summary:
+      "A planted gravel filter built into the campus fountain basin that removes the nutrients algae feed on, replacing chlorine treatment that has harmed the fountain's other aquatic life.",
   },
   {
     title: "Waste management",
