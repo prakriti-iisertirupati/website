@@ -40,37 +40,37 @@ const EVENTS = [
   {
     title: "Film screening",
     kind: "Screening",
-    when: "Fri 18 September, 6:00 PM",
+    when: "Fri 18 September",
     venue: "IISER Tirupati campus",
     scope: "on",
-    status: "upcoming",
+    status: "past",
     summary:
       "A screening followed by open discussion. We pick films that open up a real environmental question rather than ones that simply inform.",
   },
   {
     title: "Orientation — meet Prakriti",
     kind: "Session",
-    when: "Sat 19 September, 5:00 PM",
+    when: "Sat 19 September",
     venue: "IISER Tirupati campus",
     scope: "on",
-    status: "upcoming",
+    status: "past",
     summary:
       "An introduction to the club for the new batch: the work we actually do, the five verticals, and how to join one. Open to anyone curious, whether or not you intend to sign up.",
   },
   {
     title: "Ice breaker session",
     kind: "Session",
-    when: "Sun 20 September, 5:00 PM",
+    when: "Sun 20 September",
     venue: "IISER Tirupati campus",
     scope: "on",
-    status: "upcoming",
+    status: "past",
     summary:
       "An informal evening to welcome the new batch and meet the people already doing the work. The EcoVoices debate motions are released at the end of the session.",
   },
   {
     title: "Campus ecology walk",
     kind: "Walk",
-    when: "Sat 26 September, 6:30 AM",
+    when: "Sat 26 September",
     venue: "IISER Tirupati campus",
     scope: "on",
     status: "upcoming",
@@ -78,19 +78,29 @@ const EVENTS = [
       "A morning mapping our own campus — species, drainage lines, invasive patches, soil transitions. Groups record observations and coordinates, and everything is consolidated into a single campus biodiversity map that we publish.",
   },
   {
+    title: "Cartography — campus mapping",
+    kind: "Field",
+    when: "Sun 27 September",
+    venue: "Venue and time will be shared by email",
+    scope: "on",
+    status: "upcoming",
+    summary:
+      "A mapping session on campus — green cover, water, drainage lines and species, recorded with coordinates and added to the club's growing campus map. Venue and timing will be sent by email.",
+  },
+  {
     title: "EcoVoices debate",
     kind: "Debate",
-    when: "Sun 27 September, 3:00 PM",
+    when: "Postponed — new date to be announced",
     venue: "IISER Tirupati campus",
     scope: "on",
     status: "upcoming",
     summary:
-      "The club's marquee event — an inter-batch debate on questions of campus ecology and environmental policy. Teams of three, mixed-year teams welcome. Motions are released at the ice breaker session the week before.",
+      "The club's marquee event — an inter-batch debate on questions of campus ecology and environmental policy. Teams of three, mixed-year teams welcome. Motions were released at the ice breaker session. The debate has been postponed; the new date will be announced here and by email.",
   },
   {
     title: "Guest talk 1 — waste management",
     kind: "Talk",
-    when: "Sat 3 October, 3:00 PM",
+    when: "Sat 3 October",
     venue: "IISER Tirupati campus",
     scope: "on",
     status: "upcoming",
@@ -100,7 +110,7 @@ const EVENTS = [
   {
     title: "Film screening",
     kind: "Screening",
-    when: "Sun 18 October, 6:00 PM",
+    when: "Sun 18 October",
     venue: "IISER Tirupati campus",
     scope: "on",
     status: "upcoming",
@@ -110,7 +120,7 @@ const EVENTS = [
   {
     title: "Guest talk 2 — agricultural challenges",
     kind: "Talk",
-    when: "Sat 24 October, 3:00 PM",
+    when: "Sat 24 October",
     venue: "IISER Tirupati campus",
     scope: "on",
     status: "upcoming",
@@ -120,7 +130,7 @@ const EVENTS = [
   {
     title: "Hardware workshop — conservation technology",
     kind: "Workshop",
-    when: "Sun 25 October, 9:00 AM",
+    when: "Sun 25 October",
     venue: "IISER Tirupati campus",
     scope: "on",
     status: "upcoming",
@@ -130,7 +140,7 @@ const EVENTS = [
   {
     title: "Film screening",
     kind: "Screening",
-    when: "Sun 1 November, 6:00 PM",
+    when: "Sun 1 November",
     venue: "IISER Tirupati campus",
     scope: "on",
     status: "upcoming",
@@ -177,9 +187,9 @@ const EVENTS = [
 const NEWS = [
   {
     date: "September 2026",
-    title: "New batch — join Prakriti",
+    title: "This weekend: ecology walk and cartography",
     summary:
-      "Orientation is on Sat 19 September at 5:00 PM, followed by the ice breaker on Sun 20 September, where the EcoVoices debate motions are released. Come to either to meet the team and find out how to join one of the five verticals.",
+      "The campus ecology walk is on Sat 26 September, and a cartography session follows on Sun 27 September — venue and timings will be sent by email. The EcoVoices debate has been postponed; the new date will be announced here.",
     promote: true,
   },
   {
