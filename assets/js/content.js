@@ -40,7 +40,7 @@ const EVENTS = [
   {
     title: "Film screening",
     kind: "Screening",
-    when: "Fri 18 September",
+    when: "Sun 20 September",
     venue: "IISER Tirupati campus",
     scope: "on",
     status: "past",
@@ -68,24 +68,14 @@ const EVENTS = [
       "An informal evening to welcome the new batch and meet the people already doing the work. The EcoVoices debate motions are released at the end of the session.",
   },
   {
-    title: "Campus ecology walk",
+    title: "Campus ecology walk and cartography",
     kind: "Walk",
-    when: "Sat 26 September",
-    venue: "IISER Tirupati campus",
-    scope: "on",
-    status: "upcoming",
-    summary:
-      "A morning mapping our own campus — species, drainage lines, invasive patches, soil transitions. Groups record observations and coordinates, and everything is consolidated into a single campus biodiversity map that we publish.",
-  },
-  {
-    title: "Cartography — campus mapping",
-    kind: "Field",
-    when: "Sun 27 September",
+    when: "Sun 27 September, morning",
     venue: "Venue and time will be shared by email",
     scope: "on",
     status: "upcoming",
     summary:
-      "A mapping session on campus — green cover, water, drainage lines and species, recorded with coordinates and added to the club's growing campus map. Venue and timing will be sent by email.",
+      "A morning mapping our own campus — species, drainage lines, invasive patches, soil transitions. Groups record observations and coordinates, and everything is consolidated into a single campus biodiversity map that we publish. Venue and timing will be sent by email.",
   },
   {
     title: "EcoVoices debate",
@@ -187,9 +177,9 @@ const EVENTS = [
 const NEWS = [
   {
     date: "September 2026",
-    title: "This weekend: ecology walk and cartography",
+    title: "This Sunday: ecology walk and cartography",
     summary:
-      "The campus ecology walk is on Sat 26 September, and a cartography session follows on Sun 27 September — venue and timings will be sent by email. The EcoVoices debate has been postponed; the new date will be announced here.",
+      "The campus ecology walk and cartography session is on Sunday 27 September, in the morning — venue and timing will be sent by email. The EcoVoices debate has been postponed; the new date will be announced here.",
     promote: true,
   },
   {
