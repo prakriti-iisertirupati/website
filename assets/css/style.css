@@ -310,7 +310,34 @@ p{margin:0 0 1rem;max-width:68ch}
 }
 .section--paper .pending{background:var(--millet)}
 
+/* ---------- archive articles ---------- */
+.art-byline{font-size:15px;color:var(--ink-soft);margin-bottom:6px}
+.art-note{font-size:13.5px;color:var(--muted);max-width:70ch;margin:0}
+.prose{max-width:720px;margin:0 auto;font-size:1.02rem;line-height:1.75}
+.prose p{max-width:none}
+.prose h2{margin:2.4rem 0 .9rem;padding-top:1.2rem;border-top:1px solid var(--rule)}
+.prose h2:first-child{margin-top:0;padding-top:0;border-top:0}
+.prose h3{margin:1.9rem 0 .6rem}
+.prose h4{margin:1.4rem 0 .4rem;font-family:var(--sans);font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--laterite)}
+.prose a{overflow-wrap:anywhere}
+.art-part{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--laterite)}
+.art-step{display:flex;gap:12px;align-items:baseline;font-size:clamp(16px,1.5vw,19px)}
+.art-step span{flex:none;font-family:var(--mono);font-size:13px;color:var(--paper);background:var(--green);border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;transform:translateY(-2px)}
+.art-fig{margin:1.6rem 0;background:var(--paper);border:1px solid var(--rule);border-radius:4px;padding:10px}
+.art-fig img{margin:0 auto;max-height:520px;width:auto;height:auto}
+.art-fig figcaption{font-size:12.5px;color:var(--muted);padding:8px 4px 0;line-height:1.5}
+.art-scan img{max-height:none;width:100%}
+.art-refs{font-size:14px;color:var(--ink-soft);padding-left:1.4rem}
+.art-refs li{margin-bottom:.45rem}
+.art-back{max-width:720px;margin:2.4rem auto 0;font-size:14.5px}
+
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *{animation:none!important;transition:none!important}
 }
+.art-scans{margin:1.8rem 0;border:1px solid var(--rule);border-radius:4px;background:var(--paper);padding:0 14px}
+.art-scans summary{cursor:pointer;padding:12px 0;font-size:14.5px;color:var(--green-dark)}
+.art-scans[open] summary{border-bottom:1px solid var(--rule-soft);margin-bottom:10px}
+.art-scans .art-fig{border:0;background:none;padding:0}
+.art-fig--gone img{display:none}
+.art-fig--gone figcaption::before{content:"Image unavailable — ";font-style:italic}

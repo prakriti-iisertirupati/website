@@ -17,7 +17,8 @@
     { href: "about.html",       label: "About" }
   ];
 
-  var here = location.pathname.split("/").pop() || "index.html";
+  var here = (document.body && document.body.getAttribute("data-nav")) ||
+    location.pathname.split("/").pop() || "index.html";
 
   function esc(s) {
     return String(s == null ? "" : s)
@@ -184,7 +185,8 @@
       idx.push({ kind: "News", title: n.title, extra: n.date + " " + n.summary, href: "news.html" });
     });
     (typeof LEARN !== "undefined" ? LEARN : []).forEach(function (l) {
-      idx.push({ kind: "Learn", title: l.title, extra: l.kind + " " + l.summary, href: "learn.html" });
+      idx.push({ kind: "Learn", title: l.title, extra: l.kind + " " + (l.byline || "") + " " + l.summary,
+        href: l.link && !/^https?:/.test(l.link) ? l.link : "learn.html" });
     });
     (typeof REPORTS !== "undefined" ? REPORTS : []).forEach(function (r) {
       idx.push({ kind: "Report " + r.id, title: r.problem, extra: r.mandal + " " + r.crop, href: "field-notes.html" });
@@ -339,7 +341,9 @@
           "<h3>" + esc(l.title) + "</h3>" +
           (l.byline ? '<p class="muted" style="font-size:13px;margin-bottom:8px">' + esc(l.byline) + "</p>" : "") +
           "<p>" + esc(l.summary) + "</p>" +
-          (l.link ? '<div class="card__foot"><a href="' + esc(l.link) + '" target="_blank" rel="noopener">Read the full article &rarr;</a></div>' : "") +
+          (l.link ? '<div class="card__foot"><a href="' + esc(l.link) + '"' +
+            (/^https?:/.test(l.link) ? ' target="_blank" rel="noopener"' : "") + ">" +
+            esc(l.cta || "Read the full article") + " &rarr;</a></div>" : "") +
           "</article>";
       }).join(""));
     }

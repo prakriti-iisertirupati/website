@@ -49,10 +49,16 @@ science.html        Problems and solutions, National Science Day format
 our-work.html       Campus initiatives
 about.html          Mentor, team, past coordinators, contact
 
+article-disappearing-insects.html      Archived article (2021), full text
+article-sustainable-architecture.html  Archived article (2021), full text
+interview-sustainable-architecture.html  Archived interview scans (2021)
+
 assets/js/content.js   ← edit this
 assets/js/site.js      header, footer, search, section rendering
 assets/css/style.css   all styling
-assets/img/            logo and icons
+assets/img/            logo, icons and team photos
+assets/img/archive/    images from the club's original 2021 blog
+assets/docs/           downloadable PDFs
 ```
 ---
 
