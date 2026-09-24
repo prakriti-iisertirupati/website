@@ -1,5 +1,5 @@
 /* ============================================================
-   PRAKRITI — SITE CONTENT
+   PRAKRITI: SITE CONTENT
    ------------------------------------------------------------
    This is the ONLY file you need to edit to update the website.
    Do not edit the .html files or site.js unless you are changing
@@ -20,7 +20,7 @@ const SITE = {
     "https://www.linkedin.com/in/prakriti-club-iiser-tirupati-a6b5a6213/",
   twitter: "https://twitter.com/PrakritiIiser",
   address:
-    "IISER Tirupati, Srinivasapuram, Yerpedu Mandal, Tirupati District, Andhra Pradesh, India — 517619",
+    "IISER Tirupati, Srinivasapuram, Yerpedu Mandal, Tirupati District, Andhra Pradesh, India, 517619",
 };
 
 /* ---- 2. ANNOUNCEMENT STRIP ------------------------------- */
@@ -48,7 +48,7 @@ const EVENTS = [
       "A screening followed by open discussion. We pick films that open up a real environmental question rather than ones that simply inform.",
   },
   {
-    title: "Orientation — meet Prakriti",
+    title: "Orientation: meet Prakriti",
     kind: "Session",
     when: "Sat 19 September",
     venue: "IISER Tirupati campus",
@@ -75,27 +75,27 @@ const EVENTS = [
     scope: "on",
     status: "upcoming",
     summary:
-      "A morning mapping our own campus — species, drainage lines, invasive patches, soil transitions. Groups record observations and coordinates, and everything is consolidated into a single campus biodiversity map that we publish. Venue and timing will be sent by email.",
+      "A morning mapping our own campus: species, drainage lines, invasive patches, soil transitions. Groups record observations and coordinates, and everything is consolidated into a single campus biodiversity map that we publish. Venue and timing will be sent by email.",
   },
   {
     title: "EcoVoices debate",
     kind: "Debate",
-    when: "Postponed — new date to be announced",
+    when: "Postponed, new date to be announced",
     venue: "IISER Tirupati campus",
     scope: "on",
     status: "upcoming",
     summary:
-      "The club's marquee event — an inter-batch debate on questions of campus ecology and environmental policy. Teams of three, mixed-year teams welcome. Motions were released at the ice breaker session. The debate has been postponed; the new date will be announced here and by email.",
+      "The club's marquee event, an inter-batch debate on questions of campus ecology and environmental policy. Teams of three, mixed-year teams welcome. Motions were released at the ice breaker session. The debate has been postponed; the new date will be announced here and by email.",
   },
   {
-    title: "Guest talk 1 — waste management",
+    title: "Guest talk 1: waste management",
     kind: "Talk",
     when: "Sat 3 October",
     venue: "IISER Tirupati campus",
     scope: "on",
     status: "upcoming",
     summary:
-      "A practitioner's view of how waste actually moves through a city of this size and where it ends up — segregation, the informal sector, and what fails at scale.",
+      "A practitioner's view of how waste actually moves through a city of this size and where it ends up: segregation, the informal sector, and what fails at scale.",
   },
   {
     title: "Film screening",
@@ -108,7 +108,7 @@ const EVENTS = [
       "The second screening of the semester, followed by an open discussion.",
   },
   {
-    title: "Guest talk 2 — agricultural challenges",
+    title: "Guest talk 2: agricultural challenges",
     kind: "Talk",
     when: "Sat 24 October",
     venue: "IISER Tirupati campus",
@@ -118,7 +118,7 @@ const EVENTS = [
       "Extension scientists from the region on the problems farmers around Tirupati are actually bringing to them this season, and where the existing system runs out of answers. Held the day before the hardware workshop, so participants hear the problem before they build for it.",
   },
   {
-    title: "Hardware workshop — conservation technology",
+    title: "Hardware workshop: conservation technology",
     kind: "Workshop",
     when: "Sun 25 October",
     venue: "IISER Tirupati campus",
@@ -138,17 +138,17 @@ const EVENTS = [
       "The closing screening of the semester, followed by an open discussion and a look back at the semester's work.",
   },
   {
-    title: "Field trip — Chittoor district",
+    title: "Field trip: Chittoor district",
     kind: "Field",
     when: "From Tue 1 December, after end-semester exams",
-    venue: "Off campus — village cluster in Chittoor district",
+    venue: "Off campus, village cluster in Chittoor district",
     scope: "off",
     status: "upcoming",
     summary:
       "A visit to a village cluster in Chittoor district: farmer interviews, deployment of the instruments built at the hardware workshop, and a session with school students on filing field reports. Registration opens in November.",
   },
   {
-    title: "EcoQuest — National Science Day showcase",
+    title: "EcoQuest: National Science Day showcase",
     kind: "Exhibition",
     when: "Earlier work",
     venue: "IISER Tirupati campus",
@@ -179,7 +179,7 @@ const NEWS = [
     date: "September 2026",
     title: "This Sunday: ecology walk and cartography",
     summary:
-      "The campus ecology walk and cartography session is on Sunday 27 September, in the morning — venue and timing will be sent by email. The EcoVoices debate has been postponed; the new date will be announced here.",
+      "The campus ecology walk and cartography session is on Sunday 27 September, in the morning. Venue and timing will be sent by email. The EcoVoices debate has been postponed; the new date will be announced here.",
     promote: true,
   },
   {
@@ -201,7 +201,7 @@ const NEWS = [
 /* ---- 5. OPEN PROBLEMS BOARD ------------------------------
    status: "new" / "routed" / "answered"
    NEVER put a farmer's name, phone number or exact address here.
-   Village-level detail only — mandal is enough.
+   Village-level detail only: mandal is enough.
    Add a real report as:
    { id:"PRK-0001", problem:"...", mandal:"...", crop:"...", status:"new" }, */
 const REPORTS = [];
@@ -215,18 +215,18 @@ const SCIENCE = [
     science:
       "The water these borewells draw is stored in hard rock, in cracks and fractures rather than a continuous underground layer, so there is far less of it than the depth suggests. When wells are pumped faster than the rain can refill those fractures, the shared water table drops for everyone nearby, and drilling deeper only reaches an even smaller, older store that recharges more slowly. Rayalaseema is one of the most groundwater-stressed regions in the country, and the pattern is well documented by the Central Ground Water Board in its district assessments.",
     actions: {
-      home: "On a single farm, the highest-return step is usually to slow how fast water is used, not to find more of it — drip irrigation, mulching to cut evaporation, and shifting the most water-hungry crops to the wettest part of the year.",
+      home: "On a single farm, the highest-return step is usually to slow how fast water is used, not to find more of it: drip irrigation, mulching to cut evaporation, and shifting the most water-hungry crops to the wettest part of the year.",
       campus:
         "The club can help map where borewells are failing and where water is standing after rain, building a simple local picture of recharge that a village or a panchayat can actually act on.",
       policy:
-        "Real recovery needs shared recharge structures — check dams, farm ponds, and restored tanks — planned at the level of a whole catchment, which means a panchayat or a watershed scheme rather than any one farmer acting alone.",
+        "Real recovery needs shared recharge structures, check dams, farm ponds, and restored tanks, planned at the level of a whole catchment, which means a panchayat or a watershed scheme rather than any one farmer acting alone.",
     },
     ask: "The district office of the Central Ground Water Board, the local Krishi Vigyan Kendra, and researchers working on hydrology and watershed management are the right people to bring specific questions to.",
   },
 ];
 
 /* ---- 7. LEARN --------------------------------------------
-   Teaching resources — problems, solutions, guides, explainers.
+   Teaching resources: problems, solutions, guides, explainers.
    kind: Explainer / Guide / Reading list / Video / Field note
    link: a page on this site (e.g. "article-name.html"), an
          external URL, or "" for none
@@ -237,7 +237,7 @@ const LEARN = [
     title: "Disappearing insects",
     byline: "Tejaswini Venkatramanan & Bhavya Subi · BS-MS 2020",
     summary:
-      "Insects are among the most abundant animals on the planet and quietly do the heavy lifting in every ecosystem — pollinating crops, recycling soil nutrients, feeding the food chain. Their numbers are now collapsing: a review in Biological Conservation estimates around 40% of insect species could go extinct in the coming years, driven by pesticides, habitat loss and climate change. Part two lays out what can actually be done, from global strategy down to leaving your lawn unmown and planting native species.",
+      "Insects are among the most abundant animals on the planet and quietly do the heavy lifting in every ecosystem: pollinating crops, recycling soil nutrients, feeding the food chain. Their numbers are now collapsing: a review in Biological Conservation estimates around 40% of insect species could go extinct in the coming years, driven by pesticides, habitat loss and climate change. Part two lays out what can actually be done, from global strategy down to leaving your lawn unmown and planting native species.",
     link: "article-disappearing-insects.html",
   },
   {
@@ -245,12 +245,12 @@ const LEARN = [
     title: "Sustainable architecture",
     byline: "Nithish G. S. · BS-MS 2019",
     summary:
-      "Buildings account for roughly 38% of energy-related CO2 emissions, which makes how we design them a climate question, not just an aesthetic one. This piece walks through real examples — Singapore cooling its streets with vegetation, a Lebanese architect building schools from local earth and clay, Mick Pearce's Eastgate Centre in Harare that cools itself by copying termite mounds — and the principle running through all of them: work with the local climate instead of against it.",
+      "Buildings account for roughly 38% of energy-related CO2 emissions, which makes how we design them a climate question, not just an aesthetic one. This piece walks through real examples: Singapore cooling its streets with vegetation, a Lebanese architect building schools from local earth and clay, Mick Pearce's Eastgate Centre in Harare that cools itself by copying termite mounds, and the principle running through all of them: work with the local climate instead of against it.",
     link: "article-sustainable-architecture.html",
   },
   {
     kind: "Interview series",
-    title: "Interview 1 — Sustainable architecture",
+    title: "Interview 1: Sustainable architecture",
     byline: "Prakriti archive · 2021",
     summary:
       "A three-part written interview on sustainable architecture, published as part of the club's early interview series in 2021. All three parts are here as the original scanned pages, with PDF downloads.",
@@ -268,13 +268,13 @@ const INITIATIVES = [
     title: "E-waste collection bins",
     status: "Planned",
     summary:
-      "Dedicated bins for electronic waste — old cables, chargers, batteries and dead devices — so campus e-waste is collected and routed to proper recycling instead of general trash.",
+      "Dedicated bins for electronic waste, old cables, chargers, batteries and dead devices, so campus e-waste is collected and routed to proper recycling instead of general trash.",
   },
   {
     title: "Recycling & reuse corner",
     status: "Planned",
     summary:
-      "A common space where unused but usable things — stationery, books, supplies — can be left for others to take, cutting waste and helping students who need them.",
+      "A common space where unused but usable things, stationery, books, supplies, can be left for others to take, cutting waste and helping students who need them.",
   },
   {
     title: "Fountain bog filter",
@@ -292,7 +292,7 @@ const INITIATIVES = [
     title: "Cartography",
     status: "Ongoing",
     summary:
-      "Mapping campus green cover, water bodies, and species distribution — a record that grows every semester.",
+      "Mapping campus green cover, water bodies, and species distribution, a record that grows every semester.",
   },
   {
     title: "Campus tree census",
@@ -304,7 +304,7 @@ const INITIATIVES = [
     title: "Native sapling drive",
     status: "Monsoon",
     summary:
-      "Species that belong to this landscape, planted where they will actually survive — with someone taking responsibility for watering them afterwards.",
+      "Species that belong to this landscape, planted where they will actually survive, with someone taking responsibility for watering them afterwards.",
   },
 ];
 
@@ -312,9 +312,9 @@ const INITIATIVES = [
 const TEAM = {
   mentor: {
     name: "Dr. Nandini Rajamani",
-    role: "Faculty mentor — Associate Professor, Department of Biology, IISER Tirupati",
+    role: "Faculty mentor, Associate Professor, Department of Biology, IISER Tirupati",
     photo: "nandini-rajamani.jpg",
-    note: "Dr. Rajamani's work sits at the intersection of ecology and human-altered landscapes — exactly the ground this club stands on. She studies how species respond to environmental change and to the pressures humans put on their habitats, and she brings both a research lens and a science-communication practice to how the club approaches its projects.",
+    note: "Dr. Rajamani's work sits at the intersection of ecology and human-altered landscapes, exactly the ground this club stands on. She studies how species respond to environmental change and to the pressures humans put on their habitats, and she brings both a research lens and a science-communication practice to how the club approaches its projects.",
     link: "",
   },
 

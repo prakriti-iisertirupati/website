@@ -1,4 +1,4 @@
-/* Prakriti — Conservation Club, IISER Tirupati
+/* Prakriti, Conservation Club, IISER Tirupati
    Direction C: Soil and Signal
    Edit content in assets/js/content.js, not here. */
 
@@ -340,4 +340,4 @@ p{margin:0 0 1rem;max-width:68ch}
 .art-scans[open] summary{border-bottom:1px solid var(--rule-soft);margin-bottom:10px}
 .art-scans .art-fig{border:0;background:none;padding:0}
 .art-fig--gone img{display:none}
-.art-fig--gone figcaption::before{content:"Image unavailable — ";font-style:italic}
+.art-fig--gone figcaption::before{content:"Image unavailable: ";font-style:italic}

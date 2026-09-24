@@ -1,4 +1,4 @@
-/* Prakriti — shared site script.
+/* Prakriti: shared site script.
    Builds the header, nav, footer and search on every page, and fills
    in any content sections the current page asks for.
    Content lives in content.js. You should not need to edit this file. */
@@ -115,7 +115,7 @@
             "Ecology &amp; Conservation Club<br>A student club under SAC<br>IISER Tirupati" +
           "</div>" +
           "<div><h4>Contact us</h4>" +
-            "IISER Tirupati<br>Srinivasapuram, Yerpedu Mandal<br>Tirupati District, Andhra Pradesh<br>India — 517619" +
+            "IISER Tirupati<br>Srinivasapuram, Yerpedu Mandal<br>Tirupati District, Andhra Pradesh<br>India, 517619" +
             '<br><br><a href="mailto:' + esc(s.email) + '">' + esc(s.email) + "</a>" +
             ' <button type="button" class="copybtn" data-copy="' + esc(s.email) + '" aria-label="Copy email address">Copy</button>' +
           "</div>" +
@@ -300,7 +300,7 @@
     if (el("reports-board")) {
       fill("reports-board", REPORTS.length
         ? REPORTS.map(reportRow).join("")
-        : '<p class="pending">No reports on the board yet. As farmers and students start sending them in, they will appear here — each one anonymised, with only the mandal and crop shown.</p>');
+        : '<p class="pending">No reports on the board yet. As farmers and students start sending them in, they will appear here, each one anonymised, with only the mandal and crop shown.</p>');
     }
     if (el("home-reports")) {
       fill("home-reports", REPORTS.length
@@ -327,7 +327,7 @@
             return '<article class="card"><div class="card__meta">' + esc(n.date) + "</div>" +
               "<h3>" + esc(n.title) + "</h3><p>" + esc(n.summary) + "</p></article>";
           }).join("")
-        : '<p class="pending">No news yet — check back after the first programme.</p>');
+        : '<p class="pending">No news yet, check back after the first programme.</p>');
     }
     if (el("home-news")) {
       fill("home-news", NEWS.slice(0, 2).map(function (n) {
@@ -357,7 +357,7 @@
       fill("core-team", TEAM.core.map(function (v) {
         var body = v.members.length
           ? '<ul class="teamlist">' + v.members.map(function (m) {
-              return "<li>" + esc(m.name) + (m.role ? ' <span class="muted">— ' + esc(m.role) + "</span>" : "") + "</li>";
+              return "<li>" + esc(m.name) + (m.role ? ' <span class="muted">, ' + esc(m.role) + "</span>" : "") + "</li>";
             }).join("") + "</ul>"
           : '<p class="muted">Members to be listed.</p>';
         return '<article class="card"><h3>' + esc(v.vertical) + "</h3>" + body + "</article>";
