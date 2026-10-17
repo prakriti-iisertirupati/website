@@ -70,12 +70,12 @@ const EVENTS = [
   {
     title: "Campus ecology walk and cartography",
     kind: "Walk",
-    when: "Sun 27 September, morning",
+    when: "Date to be announced",
     venue: "Venue and time will be shared by email",
     scope: "on",
     status: "upcoming",
     summary:
-      "A morning mapping our own campus: species, drainage lines, invasive patches, soil transitions. Groups record observations and coordinates, and everything is consolidated into a single campus biodiversity map that we publish. Venue and timing will be sent by email.",
+      "A morning mapping our own campus: species, drainage lines, invasive patches, soil transitions. Groups record observations and coordinates, and everything is consolidated into a single campus biodiversity map that we publish. Date, venue and timing will be sent by email.",
   },
   {
     title: "EcoVoices debate",
@@ -90,7 +90,7 @@ const EVENTS = [
   {
     title: "Guest talk 1: waste management",
     kind: "Talk",
-    when: "Sat 3 October",
+    when: "Date to be announced",
     venue: "IISER Tirupati campus",
     scope: "on",
     status: "upcoming",
@@ -100,7 +100,7 @@ const EVENTS = [
   {
     title: "Film screening",
     kind: "Screening",
-    when: "Sun 18 October",
+    when: "Date to be announced",
     venue: "IISER Tirupati campus",
     scope: "on",
     status: "upcoming",
@@ -110,17 +110,17 @@ const EVENTS = [
   {
     title: "Guest talk 2: agricultural challenges",
     kind: "Talk",
-    when: "Sat 24 October",
+    when: "Date to be announced",
     venue: "IISER Tirupati campus",
     scope: "on",
     status: "upcoming",
     summary:
-      "Extension scientists from the region on the problems farmers around Tirupati are actually bringing to them this season, and where the existing system runs out of answers. Held the day before the hardware workshop, so participants hear the problem before they build for it.",
+      "Extension scientists from the region on the problems farmers around Tirupati are actually bringing to them this season, and where the existing system runs out of answers. Held the day before the hardware workshop, so participants hear the problem before they build for it. The date is being rescheduled.",
   },
   {
     title: "Hardware workshop: conservation technology",
     kind: "Workshop",
-    when: "Sun 25 October",
+    when: "Date to be announced",
     venue: "IISER Tirupati campus",
     scope: "on",
     status: "upcoming",
@@ -130,7 +130,7 @@ const EVENTS = [
   {
     title: "Film screening",
     kind: "Screening",
-    when: "Sun 1 November",
+    when: "Date to be announced",
     venue: "IISER Tirupati campus",
     scope: "on",
     status: "upcoming",
@@ -176,10 +176,10 @@ const EVENTS = [
    date: free text, e.g. "August 2026" or "Coming up"          */
 const NEWS = [
   {
-    date: "September 2026",
-    title: "This Sunday: ecology walk and cartography",
+    date: "October 2026",
+    title: "Semester events are being rescheduled",
     summary:
-      "The campus ecology walk and cartography session is on Sunday 27 September, in the morning. Venue and timing will be sent by email. The EcoVoices debate has been postponed; the new date will be announced here.",
+      "The remaining events of the semester, the ecology walk and cartography session, both guest talks, the hardware workshop and the screenings, are being rescheduled. New dates will be announced here and sent by email. The December field trip to Chittoor district is unchanged, and registration opens in November.",
     promote: true,
   },
   {
