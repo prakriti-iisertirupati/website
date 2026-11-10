@@ -38,6 +38,96 @@ const ANNOUNCE = {
            Walk / Social / Exhibition / Session                */
 const EVENTS = [
   {
+    title: "EcoVoices debate",
+    kind: "Debate",
+    when: "Fri 13 November",
+    venue: "IISER Tirupati campus",
+    scope: "on",
+    status: "upcoming",
+    summary:
+      "The club's marquee event, an inter-batch debate on questions of campus ecology and environmental policy. Teams of three, mixed-year teams welcome. Motions were released at the ice breaker session.",
+  },
+  {
+    title: "Guest talk: waste management",
+    kind: "Talk",
+    when: "Date to be announced",
+    venue: "IISER Tirupati campus",
+    scope: "on",
+    status: "upcoming",
+    summary:
+      "A practitioner's view of how waste actually moves through a city of this size and where it ends up: segregation, the informal sector, and what fails at scale.",
+  },
+  {
+    title: "Film screening",
+    kind: "Screening",
+    when: "Date to be announced",
+    venue: "IISER Tirupati campus",
+    scope: "on",
+    status: "upcoming",
+    summary:
+      "The second screening of the semester, followed by an open discussion.",
+  },
+  {
+    title: "Film screening",
+    kind: "Screening",
+    when: "Date to be announced",
+    venue: "IISER Tirupati campus",
+    scope: "on",
+    status: "upcoming",
+    summary:
+      "The closing screening of the semester, followed by an open discussion and a look back at the semester's work.",
+  },
+  {
+    title: "Hardware workshop: conservation technology",
+    kind: "Workshop",
+    when: "Postponed to next semester, date to be announced",
+    venue: "IISER Tirupati campus",
+    scope: "on",
+    status: "upcoming",
+    summary:
+      "A full-day build session in low-cost instrumentation for farmers. Teams assemble and calibrate field devices, and the working ones go out with the field trip that follows.",
+  },
+  {
+    title: "Field trip: Chittoor district",
+    kind: "Field",
+    when: "Postponed to next semester, date to be announced",
+    venue: "Off campus, village cluster in Chittoor district",
+    scope: "off",
+    status: "upcoming",
+    summary:
+      "A visit to a village cluster in Chittoor district: farmer interviews and field testing of the devices built at the hardware workshop. Dates and registration will be announced here.",
+  },
+  {
+    title: "Campus ecology walk and cartography",
+    kind: "Walk",
+    when: "Sun 1 November",
+    venue: "IISER Tirupati campus",
+    scope: "on",
+    status: "past",
+    summary:
+      "A morning mapping our own campus: species, drainage lines, invasive patches and soil transitions. Groups recorded observations and coordinates for a single campus biodiversity map.",
+  },
+  {
+    title: "Guest talk: agricultural challenges",
+    kind: "Talk",
+    when: "Fri 6 November",
+    venue: "IISER Tirupati campus",
+    scope: "on",
+    status: "past",
+    summary:
+      "A talk on the problems farmers around Tirupati are bringing to extension scientists this season, and where the existing system runs out of answers.",
+  },
+  {
+    title: "Ice breaker session",
+    kind: "Session",
+    when: "Sun 20 September",
+    venue: "IISER Tirupati campus",
+    scope: "on",
+    status: "past",
+    summary:
+      "An informal evening to welcome the new batch and meet the people already doing the work. The EcoVoices debate motions are released at the end of the session.",
+  },
+  {
     title: "Film screening",
     kind: "Screening",
     when: "Sun 20 September",
@@ -58,115 +148,26 @@ const EVENTS = [
       "An introduction to the club for the new batch: the work we actually do, the five verticals, and how to join one. Open to anyone curious, whether or not you intend to sign up.",
   },
   {
-    title: "Ice breaker session",
-    kind: "Session",
-    when: "Sun 20 September",
+    title: "Snake safety awareness campaign",
+    kind: "Social",
+    when: "Fri 14 January 2022",
     venue: "IISER Tirupati campus",
     scope: "on",
     status: "past",
     summary:
-      "An informal evening to welcome the new batch and meet the people already doing the work. The EcoVoices debate motions are released at the end of the session.",
+      "Posters put up around campus on the snakes found around Tirupati: identifying the Big Four venomous species, first aid for snakebite, and the numbers to call for a rescue.",
   },
   {
-    title: "Campus ecology walk and cartography",
-    kind: "Walk",
-    when: "Date to be announced",
-    venue: "Venue and time will be shared by email",
-    scope: "on",
-    status: "upcoming",
-    summary:
-      "A morning mapping our own campus: species, drainage lines, invasive patches, soil transitions. Groups record observations and coordinates, and everything is consolidated into a single campus biodiversity map that we publish. Date, venue and timing will be sent by email.",
-  },
-  {
-    title: "EcoVoices debate",
-    kind: "Debate",
-    when: "Postponed, new date to be announced",
-    venue: "IISER Tirupati campus",
-    scope: "on",
-    status: "upcoming",
-    summary:
-      "The club's marquee event, an inter-batch debate on questions of campus ecology and environmental policy. Teams of three, mixed-year teams welcome. Motions were released at the ice breaker session. The debate has been postponed; the new date will be announced here and by email.",
-  },
-  {
-    title: "Guest talk 1: waste management",
-    kind: "Talk",
-    when: "Date to be announced",
-    venue: "IISER Tirupati campus",
-    scope: "on",
-    status: "upcoming",
-    summary:
-      "A practitioner's view of how waste actually moves through a city of this size and where it ends up: segregation, the informal sector, and what fails at scale.",
-  },
-  {
-    title: "Film screening",
-    kind: "Screening",
-    when: "Date to be announced",
-    venue: "IISER Tirupati campus",
-    scope: "on",
-    status: "upcoming",
-    summary:
-      "The second screening of the semester, followed by an open discussion.",
-  },
-  {
-    title: "Guest talk 2: agricultural challenges",
-    kind: "Talk",
-    when: "Date to be announced",
-    venue: "IISER Tirupati campus",
-    scope: "on",
-    status: "upcoming",
-    summary:
-      "Extension scientists from the region on the problems farmers around Tirupati are actually bringing to them this season, and where the existing system runs out of answers. Held the day before the hardware workshop, so participants hear the problem before they build for it. The date is being rescheduled.",
-  },
-  {
-    title: "Hardware workshop: conservation technology",
-    kind: "Workshop",
-    when: "Date to be announced",
-    venue: "IISER Tirupati campus",
-    scope: "on",
-    status: "upcoming",
-    summary:
-      "A full-day build session in conservation instrumentation. Teams assemble and calibrate low-cost soil moisture and temperature logging nodes, and the working ones go out on the December field trip.",
-  },
-  {
-    title: "Film screening",
-    kind: "Screening",
-    when: "Date to be announced",
-    venue: "IISER Tirupati campus",
-    scope: "on",
-    status: "upcoming",
-    summary:
-      "The closing screening of the semester, followed by an open discussion and a look back at the semester's work.",
-  },
-  {
-    title: "Field trip: Chittoor district",
-    kind: "Field",
-    when: "From Tue 1 December, after end-semester exams",
-    venue: "Off campus, village cluster in Chittoor district",
-    scope: "off",
-    status: "upcoming",
-    summary:
-      "A visit to a village cluster in Chittoor district: farmer interviews, deployment of the instruments built at the hardware workshop, and a session with school students on filing field reports. Registration opens in November.",
-  },
-  {
-    title: "EcoQuest: National Science Day showcase",
+    title: "EcoQuest: National Science Day stall",
     kind: "Exhibition",
     when: "Earlier work",
     venue: "IISER Tirupati campus",
     scope: "on",
     status: "past",
     summary:
-      "Prakriti's flagship public science event: nineteen interactive environmental exhibits for school students, families and the public. Highlights included a working microbial fuel cell lighting LEDs, a food-web Jenga tower showing how removing a keystone species collapses an ecosystem, a decomposition timeline of everyday waste buried in soil, a tragedy-of-the-commons fishery game, and a saponin-based microplastic filter.",
+      "Prakriti's stall at IISER Tirupati's National Science Day, where the institute invited school students to campus. Interactive environmental exhibits included a working microbial fuel cell lighting LEDs, a food-web Jenga tower showing how removing a keystone species collapses an ecosystem, a decomposition timeline of everyday waste buried in soil, a tragedy-of-the-commons fishery game, and a saponin-based microplastic filter.",
   },
-  {
-    title: "Founding-era outreach",
-    kind: "Social",
-    when: "Earlier work",
-    venue: "IISER Tirupati & online",
-    scope: "on",
-    status: "past",
-    summary:
-      "The club's first phase of work: awareness posters, a flower-gardening event on the permanent campus, a waste-management activity, and a blog carrying student-written articles on insect conservation and sustainable architecture.",
-  },
+
 ];
 
 /* ---- 4. NEWS & ANNOUNCEMENTS -----------------------------
@@ -176,10 +177,10 @@ const EVENTS = [
    date: free text, e.g. "August 2026" or "Coming up"          */
 const NEWS = [
   {
-    date: "October 2026",
-    title: "Semester events are being rescheduled",
+    date: "November 2026",
+    title: "EcoVoices debate on Friday 13 November",
     summary:
-      "The remaining events of the semester, the ecology walk and cartography session, both guest talks, the hardware workshop and the screenings, are being rescheduled. New dates will be announced here and sent by email. The December field trip to Chittoor district is unchanged, and registration opens in November.",
+      "The EcoVoices inter-batch debate is on Friday 13 November. The campus ecology walk and the guest talk on agricultural challenges took place earlier this month. The hardware workshop and the Chittoor field trip move to next semester, with dates to be announced here.",
     promote: true,
   },
   {
@@ -193,7 +194,7 @@ const NEWS = [
     date: "Coming up",
     title: "New semester of events begins",
     summary:
-      "Film screenings, guest talks, a campus ecology walk, the EcoVoices debate and a hardware workshop are all coming this semester, followed by a field trip in December. See the Events page for dates.",
+      "Film screenings, guest talks, a campus ecology walk and the EcoVoices debate this semester, with a hardware workshop and field trip planned for next semester. See the Events page for dates.",
     promote: false,
   },
 ];
@@ -342,6 +343,8 @@ const TEAM = {
       members: [
         { name: "Aryan Dhanger", role: "" },
         { name: "Sneha Raj", role: "" },
+        { name: "Asmi Patel", role: "" },
+        { name: "Sakshi Thorat", role: "" },
       ],
     },
     {

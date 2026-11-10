@@ -72,7 +72,7 @@
           '<img src="assets/img/prakriti-logo.png" srcset="assets/img/prakriti-logo.png 1x, assets/img/prakriti-logo@2x.png 2x" alt="Prakriti">' +
           '<span class="lockup__txt"><b>Prakriti</b><span>Ecology &amp; Conservation Club · IISER Tirupati</span></span>' +
         "</a>" +
-        '<div class="masthead__inst"><b>IISER Tirupati</b>A student club under SAC</div>' +
+        '<div class="masthead__inst"><b>IISER Tirupati</b>A student club under COSA</div>' +
       "</div></div>" +
 
       '<nav class="mainnav" aria-label="Main"><div class="mainnav__in">' +
@@ -112,7 +112,7 @@
         '<div class="foot__grid">' +
           "<div>" +
             '<div class="foot__brand"><img src="assets/img/prakriti-mark.png" alt=""><b>Prakriti</b></div>' +
-            "Ecology &amp; Conservation Club<br>A student club under SAC<br>IISER Tirupati" +
+            "Ecology &amp; Conservation Club<br>A student club under COSA<br>IISER Tirupati" +
           "</div>" +
           "<div><h4>Contact us</h4>" +
             "IISER Tirupati<br>Srinivasapuram, Yerpedu Mandal<br>Tirupati District, Andhra Pradesh<br>India, 517619" +
